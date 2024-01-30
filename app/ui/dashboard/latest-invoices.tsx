@@ -1,3 +1,15 @@
+/**
+    * @description      : 
+    * @author           : belgacem
+    * @group            : 
+    * @created          : 30/01/2024 - 10:19:38
+    * 
+    * MODIFICATION LOG
+    * - Version         : 1.0.0
+    * - Date            : 30/01/2024
+    * - Author          : belgacem
+    * - Modification    : 
+**/
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -16,7 +28,7 @@ export default async function LatestInvoices({
       <div className="flex grow flex-col justify-between rounded-xl bg-gray-50 p-4">
         {/* NOTE: comment in this code when you get to this point in the course */}
 
-        {/* <div className="bg-white px-6">
+        <div className="bg-white px-6">
           {latestInvoices.map((invoice, i) => {
             return (
               <div
@@ -53,7 +65,7 @@ export default async function LatestInvoices({
               </div>
             );
           })}
-        </div> */}
+        </div>
         <div className="flex items-center pb-2 pt-6">
           <ArrowPathIcon className="h-5 w-5 text-gray-500" />
           <h3 className="ml-2 text-sm text-gray-500 ">Updated just now</h3>
