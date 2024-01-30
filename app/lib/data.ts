@@ -21,6 +21,8 @@ import {
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
+import { unstable_noStore as noStore } from 'next/cache';
+
 
 export async function fetchRevenue() {
   // Add noStore() here to prevent the response from being cached.
@@ -42,6 +44,7 @@ export async function fetchRevenue() {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch revenue data.');
   }
+  noStore();
 }
 
 export async function fetchLatestInvoices() {
@@ -62,6 +65,7 @@ export async function fetchLatestInvoices() {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch the latest invoices.');
   }
+  noStore();
 }
 
 export async function fetchCardData() {
@@ -97,6 +101,7 @@ export async function fetchCardData() {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch card data.');
   }
+  noStore();
 }
 
 const ITEMS_PER_PAGE = 6;
@@ -133,6 +138,7 @@ export async function fetchFilteredInvoices(
     console.error('Database Error:', error);
     throw new Error('Failed to fetch invoices.');
   }
+  noStore();
 }
 
 export async function fetchInvoicesPages(query: string) {
@@ -154,6 +160,7 @@ export async function fetchInvoicesPages(query: string) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch total number of invoices.');
   }
+  noStore();
 }
 
 export async function fetchInvoiceById(id: string) {
@@ -179,6 +186,7 @@ export async function fetchInvoiceById(id: string) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch invoice.');
   }
+  noStore();
 }
 
 export async function fetchCustomers() {
@@ -230,6 +238,7 @@ export async function fetchFilteredCustomers(query: string) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch customer table.');
   }
+  noStore();
 }
 
 export async function getUser(email: string) {
@@ -240,4 +249,5 @@ export async function getUser(email: string) {
     console.error('Failed to fetch user:', error);
     throw new Error('Failed to fetch user.');
   }
+  noStore();
 }

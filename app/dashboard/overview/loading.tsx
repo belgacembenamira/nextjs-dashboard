@@ -2,14 +2,16 @@
     * @description      : 
     * @author           : belgacem
     * @group            : 
-    * @created          : 29/01/2024 - 12:55:20
+    * @created          : 30/01/2024 - 11:21:17
     * 
     * MODIFICATION LOG
     * - Version         : 1.0.0
-    * - Date            : 29/01/2024
+    * - Date            : 30/01/2024
     * - Author          : belgacem
     * - Modification    : 
 **/
-export default function Page() {
-    return <p>Dashboard Page</p>;
-  }
+import DashboardSkeleton from '@/app/ui/skeletons';
+ 
+export default function Loading() {
+  return <DashboardSkeleton />;
+}
